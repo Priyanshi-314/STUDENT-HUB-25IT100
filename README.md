@@ -38,7 +38,7 @@ Practicals 4–14 contain only their reserved top-level directories until implem
 |---:|---|---|---|
 | 1 | Project Initiation, Requirement Analysis, Sitemap, Wireframe, and GitHub Setup | Initiate the semester-long StudentHub portal: define scope, roles, modules, navigation, at least 10 pages; create sitemap, low-fidelity wireframes, folder structure, README, and GitHub repository. | Implemented (planning artifacts and GitHub repository initialized) |
 | 2 | Semantic HTML5 Pages with Accessibility-Ready Structure | Create at least 10 linked static StudentHub pages using semantic HTML5 and accessibility-friendly structure. | Implemented (11 pages linked to the shared Practical 3 stylesheet) |
-| 3 | Responsive UI Design using CSS Grid, Flexbox, and Bootstrap/Tailwind | Design mobile-first responsive layouts using CSS Grid and Flexbox; Bootstrap or Tailwind is optional. | Pending |
+| 3 | Responsive UI Design using CSS Grid, Flexbox, and Bootstrap/Tailwind | Design mobile-first responsive layouts using CSS Grid and Flexbox; Bootstrap or Tailwind is optional. | Implemented (five responsive pages; Grid/Flexbox checks passed; screenshots pending) |
 | 4 | JavaScript DOM Manipulation, Event Handling, and UI Interactivity | Add DOM-driven UI components, event handling, theme persistence, and accessible interaction. | Pending |
 | 5 | Registration Form with Frontend Validation and User-Friendly Error Handling | Build a student registration form with the specified fields, regular-expression validation, and friendly error handling. | Pending |
 | 6 | Rendering External JSON Data using Fetch API, Search and Filter | Fetch external JSON data and implement rendering, search, filter, sorting, pagination, loading, and error states. | Pending |
@@ -75,6 +75,7 @@ Practical 2 pages link to the shared stylesheet stored in Practical 3. Practical
 
 ## Practical 15 note
 The supplied PDF's summary also lists Practical 15, “Final Integration, Testing, Documentation, Submission, and Local Deployment.” The detailed list contains its title and hours only. This project follows the requested 14-folder scope; Practical 15 is not included in the status table or implemented here.
+
 
 
 

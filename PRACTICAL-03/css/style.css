@@ -1,0 +1,954 @@
+
+/* ========================================
+   STUDENTHUB - SOFT SAGE & NAVY THEME
+   Light Mode + Dark Mode
+   ======================================== */
+
+/* ---------- THEME VARIABLES ---------- */
+
+:root {
+    color-scheme: light;
+
+    --bg: #f5f7f4;
+    --surface: #ffffff;
+    --surface-alt: #eaf0ec;
+    --header-bg: #e1ebe5;
+    --nav-bg: #edf2ee;
+
+    --text: #25352f;
+    --text-secondary: #52635b;
+    --heading: #294b40;
+
+    --primary: #397562;
+    --primary-hover: #285c4b;
+    --primary-text: #ffffff;
+
+    --border: #d4dfd8;
+    --input-bg: #ffffff;
+
+    --accent: #b4c9bc;
+    --shadow: 0 5px 18px rgba(37, 53, 47, 0.08);
+    --shadow-hover: 0 10px 25px rgba(37, 53, 47, 0.13);
+
+    --overlay: rgba(13, 25, 21, 0.65);
+    --focus: #397562;
+}
+
+body.dark-mode {
+    color-scheme: dark;
+
+    --bg: #141c24;
+    --surface: #1d2934;
+    --surface-alt: #263541;
+    --header-bg: #1c2c38;
+    --nav-bg: #202e39;
+
+    --text: #edf3f7;
+    --text-secondary: #c0cdd6;
+    --heading: #a8d8c6;
+
+    --primary: #6bb99e;
+    --primary-hover: #85cfb2;
+    --primary-text: #10251e;
+
+    --border: #40515e;
+    --input-bg: #18242e;
+
+    --accent: #344d4b;
+    --shadow: 0 5px 18px rgba(0, 0, 0, 0.18);
+    --shadow-hover: 0 10px 25px rgba(0, 0, 0, 0.30);
+
+    --overlay: rgba(0, 0, 0, 0.75);
+    --focus: #a8d8c6;
+}
+
+
+/* ---------- GLOBAL ---------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--heading);
+    line-height: 1.35;
+    margin-bottom: 12px;
+}
+
+h1 {
+    font-size: clamp(28px, 4vw, 40px);
+}
+
+h2 {
+    font-size: clamp(23px, 3vw, 30px);
+}
+
+h3 {
+    font-size: 20px;
+}
+
+p {
+    color: var(--text);
+    margin-bottom: 12px;
+}
+
+ul,
+ol {
+    margin-left: 25px;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+a {
+    color: var(--primary);
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: var(--primary-hover);
+    text-decoration: underline;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+    transition: background-color 0.2s ease,
+                color 0.2s ease,
+                transform 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid var(--focus);
+    outline-offset: 3px;
+}
+
+
+/* ---------- HEADER ---------- */
+
+header {
+    background: var(--header-bg);
+    color: var(--text);
+    text-align: center;
+    padding: 28px 20px;
+    border-bottom: 1px solid var(--border);
+}
+
+header h1,
+header h2,
+header h3 {
+    color: var(--heading);
+}
+
+header p {
+    color: var(--text-secondary);
+}
+
+
+/* ---------- NAVIGATION ---------- */
+
+nav {
+    background: var(--nav-bg);
+    text-align: center;
+    padding: 15px;
+    border-bottom: 1px solid var(--border);
+}
+
+nav a {
+    display: inline-block;
+    color: var(--text);
+    text-decoration: none;
+    margin: 4px 6px;
+    font-weight: 600;
+    padding: 9px 16px;
+    border-radius: 10px;
+    transition: background-color 0.2s ease,
+                color 0.2s ease;
+}
+
+nav a:hover {
+    background: var(--primary);
+    color: var(--primary-text);
+    text-decoration: none;
+}
+
+
+/* ---------- MAIN CONTENT ---------- */
+
+main {
+    width: 90%;
+    max-width: 1200px;
+    margin: 30px auto;
+}
+
+section,
+article,
+form {
+    background: var(--surface);
+    color: var(--text);
+    padding: 25px;
+    margin-bottom: 22px;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+}
+
+aside {
+    background: var(--surface-alt);
+    color: var(--text);
+    padding: 20px;
+    border-left: 5px solid var(--primary);
+    border-radius: 10px;
+}
+
+section p,
+article p,
+aside p {
+    color: var(--text);
+}
+
+
+/* ---------- FORMS ---------- */
+
+label {
+    display: inline-block;
+    color: var(--text);
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+input[type="date"],
+input[type="number"],
+input[type="search"],
+select,
+textarea {
+    display: block;
+    width: 100%;
+    padding: 12px 14px;
+    margin-top: 5px;
+    margin-bottom: 16px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: var(--input-bg);
+    color: var(--text);
+    transition: border-color 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: var(--text-secondary);
+    opacity: 0.85;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--focus);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--focus) 20%, transparent);
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    accent-color: var(--primary);
+    margin-right: 6px;
+}
+
+input[type="submit"],
+input[type="reset"],
+button {
+    background: var(--primary);
+    color: var(--primary-text);
+    border: 1px solid transparent;
+    padding: 11px 20px;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+button:hover {
+    background: var(--primary-hover);
+    color: var(--primary-text);
+}
+
+input[type="reset"] {
+    margin-left: 8px;
+}
+
+
+/* ---------- IMAGES ---------- */
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
+
+
+/* ---------- TABLES ---------- */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: var(--surface);
+    color: var(--text);
+}
+
+table,
+th,
+td {
+    border: 1px solid var(--border);
+}
+
+th {
+    background: var(--primary);
+    color: var(--primary-text);
+    font-weight: 700;
+}
+
+th,
+td {
+    padding: 12px;
+    text-align: center;
+}
+
+td {
+    color: var(--text);
+}
+
+tr:nth-child(even) {
+    background: var(--surface-alt);
+}
+
+tr:hover {
+    background: var(--accent);
+}
+
+
+/* ---------- FOOTER ---------- */
+
+footer {
+    background: var(--header-bg);
+    color: var(--text);
+    text-align: center;
+    padding: 22px;
+    margin-top: 30px;
+    border-top: 1px solid var(--border);
+}
+
+footer p {
+    color: var(--text);
+}
+
+
+/* ========================================
+   HOME PAGE
+   ======================================== */
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    background: var(--surface);
+    color: var(--text);
+    padding: 40px;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    margin-bottom: 30px;
+    box-shadow: var(--shadow);
+}
+
+.heroText {
+    flex: 1;
+}
+
+.smallTitle {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--primary);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.heroText h2 {
+    font-size: clamp(28px, 4vw, 40px);
+    color: var(--heading);
+    margin-bottom: 15px;
+}
+
+.heroText p {
+    max-width: 600px;
+    color: var(--text-secondary);
+}
+
+.heroButtons {
+    margin-top: 20px;
+}
+
+.heroButtons button {
+    margin: 5px 8px 5px 0;
+}
+
+.heroCard {
+    width: 280px;
+    background: var(--surface-alt);
+    color: var(--text);
+    padding: 30px;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    text-align: center;
+}
+
+.heroCard span {
+    font-size: 45px;
+}
+
+.heroCard h3 {
+    color: var(--heading);
+    margin-top: 10px;
+}
+
+
+/* ---------- HOME PAGE CARDS ---------- */
+
+.cardSection {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+}
+
+.sectionHeading {
+    margin-bottom: 20px;
+}
+
+.cardGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.infoCard {
+    background: var(--surface);
+    color: var(--text);
+    padding: 25px;
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    box-shadow: var(--shadow);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.infoCard:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
+
+.infoCard p {
+    color: var(--text-secondary);
+}
+
+.cardIcon {
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+.infoCard h3 {
+    color: var(--heading);
+}
+
+.infoCard a,
+.noticeCard a {
+    color: var(--primary);
+    font-weight: 700;
+}
+
+
+/* ---------- SERVICES ---------- */
+
+.servicesSection {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 35% 65%;
+    gap: 25px;
+    background: var(--surface-alt);
+}
+
+.servicesIntro h2 {
+    color: var(--heading);
+}
+
+.serviceList {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.serviceItem {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    background: var(--surface);
+    color: var(--text);
+    padding: 18px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+}
+
+.serviceItem > span {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.serviceItem h3 {
+    margin-bottom: 4px;
+}
+
+.serviceItem p {
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+
+/* ---------- BOTTOM CARDS ---------- */
+
+.bottomGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+    margin-top: 30px;
+}
+
+.noticeCard,
+.quickCard {
+    background: var(--surface);
+    color: var(--text);
+    padding: 25px;
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    box-shadow: var(--shadow);
+}
+
+.noticeCard {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.noticeIcon {
+    font-size: 35px;
+}
+
+.quickLinks {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.quickLinks a {
+    color: var(--text);
+    background: var(--surface-alt);
+    padding: 10px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.quickLinks a:hover {
+    background: var(--primary);
+    color: var(--primary-text);
+}
+
+
+/* ========================================
+   FAQ SECTION
+   ======================================== */
+
+.faq-item {
+    margin-bottom: 15px;
+}
+
+.faqQuestion {
+    width: 100%;
+    background: var(--surface-alt);
+    color: var(--text);
+    border: 1px solid var(--border);
+    padding: 15px;
+    text-align: left;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.faqQuestion:hover {
+    background: var(--primary);
+    color: var(--primary-text);
+}
+
+.faqAnswer {
+    display: none;
+    background: var(--surface);
+    color: var(--text);
+    padding: 15px;
+    margin: 0;
+    border: 1px solid var(--border);
+    border-top: none;
+    border-radius: 0 0 10px 10px;
+}
+
+.faqAnswer p {
+    color: var(--text);
+}
+
+
+/* ========================================
+   ANNOUNCEMENT MODAL
+   ======================================== */
+
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--overlay);
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    z-index: 1000;
+}
+
+.modal-content {
+    width: 90%;
+    max-width: 500px;
+    background: var(--surface);
+    color: var(--text);
+    padding: 30px;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: var(--shadow-hover);
+}
+
+.modal-content h2,
+.modal-content h3 {
+    color: var(--heading);
+}
+
+.modal-content p {
+    color: var(--text);
+}
+
+.closeBtn {
+    float: right;
+    border: none;
+    background: transparent;
+    color: var(--text);
+    font-size: 22px;
+    cursor: pointer;
+    padding: 2px 8px;
+}
+
+.closeBtn:hover {
+    color: var(--primary);
+    background: transparent;
+    box-shadow: none;
+}
+
+
+/* ========================================
+   NOTIFICATION POPUP
+   ======================================== */
+
+#notificationPopup {
+    display: none;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: min(320px, calc(100% - 40px));
+    background: var(--surface);
+    color: var(--text);
+    padding: 22px;
+    border: 1px solid var(--border);
+    border-left: 5px solid var(--primary);
+    border-radius: 15px;
+    box-shadow: var(--shadow-hover);
+    z-index: 9999;
+}
+
+#notificationPopup h3 {
+    color: var(--heading);
+    margin-bottom: 8px;
+}
+
+#notificationPopup p {
+    color: var(--text);
+}
+
+#closeNotification {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    border: none;
+    background: transparent;
+    color: var(--text);
+    font-size: 18px;
+    cursor: pointer;
+}
+
+#closeNotification:hover {
+    color: var(--primary);
+    background: transparent;
+    box-shadow: none;
+}
+
+
+/* ========================================
+   CHANGE HEADING BUTTON
+   ======================================== */
+
+#changeBtn {
+    background: var(--primary);
+    color: var(--primary-text);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+#changeBtn:hover {
+    background: var(--primary-hover);
+}
+
+
+/* ========================================
+   DARK / LIGHT MODE BUTTON
+   ======================================== */
+
+#themeBtn {
+    background: var(--primary);
+    color: var(--primary-text);
+    border: none;
+    padding: 10px 18px;
+    border-radius: 25px;
+    font-weight: 700;
+}
+
+#themeBtn:hover {
+    background: var(--primary-hover);
+}
+
+/* Existing JS adds body.dark-mode.
+   Theme variables automatically update all elements. */
+
+
+/* ========================================
+   PRACTICAL 4 - TRANSITIONS
+   ======================================== */
+
+button {
+    transition: transform 0.2s ease,
+                background-color 0.2s ease,
+                color 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+nav a {
+    transition: background-color 0.25s ease,
+                color 0.25s ease;
+}
+
+.card,
+.feature-card {
+    transition: transform 0.25s ease,
+                box-shadow 0.25s ease;
+}
+
+.card:hover,
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
+
+a {
+    transition: color 0.2s ease;
+}
+
+
+/* ---------- RESPONSIVE DESIGN ---------- */
+
+@media (max-width: 900px) {
+    .hero {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .heroCard {
+        width: 100%;
+    }
+
+    .cardGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .servicesSection {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    nav a {
+        display: inline-block;
+        margin: 5px;
+    }
+
+    main {
+        width: 94%;
+    }
+
+    section,
+    article,
+    form {
+        padding: 20px;
+    }
+
+    input[type="submit"],
+    input[type="reset"] {
+        width: 100%;
+        margin: 5px 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero {
+        padding: 24px;
+    }
+
+    .heroText h2 {
+        font-size: 28px;
+    }
+
+    .cardGrid,
+    .bottomGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .noticeCard {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .quickLinks {
+        grid-template-columns: 1fr;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    #notificationPopup {
+        right: 10px;
+        top: 10px;
+        width: calc(100% - 20px);
+    }
+}
+
+
+/* ---------- REDUCED MOTION ACCESSIBILITY ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
+}
+/* Shared StudentHub theme: forest green, emerald, and warm gold. */
+:root{color-scheme:dark;--bg:#0c1714;--surface:#172a23;--surface-alt:#20362b;--header-bg:#14291f;--nav-bg:#10221b;--text:#f1f3eb;--text-secondary:#bdcbbf;--heading:#f5f1e3;--primary:#48bf8c;--primary-hover:#6bd3a3;--primary-text:#10251b;--border:#355143;--input-bg:#0e1d17;--accent:#294a36;--shadow:0 8px 26px rgba(0,0,0,.26);--shadow-hover:0 14px 34px rgba(0,0,0,.38);--focus:#edc879;--gold:#edc879}
+body{background:radial-gradient(ellipse at 85% 0,rgba(54,117,82,.2),transparent 34rem),linear-gradient(180deg,#0c1714,#101d19 55%,#0b1512);color:var(--text)}
+header{background:linear-gradient(115deg,#183628,#12261d 70%,#193625);border-color:#31503e}header p,footer p,section p,article p,aside p{color:var(--text-secondary)}h1,h2,h3,h4,h5,h6{color:var(--heading)}
+a{color:#66d5a2}a:hover{color:#a0eac0}nav{background:#10221b;border-color:#31503e}nav a{color:#d1ddd3}nav a[aria-current="page"]{background:#2b6847;color:#fff3d4;border-radius:10px}nav a:hover{background:#24543c;color:#fff3d4}
+section,article,form{background:linear-gradient(155deg,#1a3026,#14271f);border-color:#355143}aside{background:#20382d;border-left-color:#edc879}footer{background:#0b1511;border-color:#31503e}footer a{color:#edc879}
+label{color:var(--text)}input[type="text"],input[type="email"],input[type="password"],input[type="tel"],input[type="date"],input[type="number"],input[type="search"],select,textarea{background:#0e1d17;color:#f5f3e8;border-color:#45634f}
+input[type="submit"],input[type="reset"],button{background:linear-gradient(135deg,#59ca96,#36aa76);color:#10251b;border-color:transparent}input[type="submit"]:hover,input[type="reset"]:hover,button:hover{background:#7cddb0;color:#10251b}
+.hero{background:radial-gradient(ellipse at 95% 4%,rgba(54,139,91,.24),transparent 22rem),linear-gradient(125deg,#19392b,#12281f 58%,#1c3b2c);border-color:#42664c}.heroCard{background:#20382d;border-color:#42664c}.smallTitle,.cardIcon,.heroCard span{color:#edc879}.infoCard,.noticeCard,.quickCard,.serviceItem{background:linear-gradient(155deg,#1b3428,#14271f);border-color:#355143}.quickLinks a{background:#20382d;border-color:#45634f;color:#f1f3eb}.quickLinks a:hover{background:#2b6847;color:#fff}
+.skip-link{position:absolute;z-index:1000;left:1rem;top:-5rem;padding:.75rem 1rem;border-radius:.7rem;background:#edc879;color:#10251b;font-weight:800}.skip-link:focus{top:1rem}
+/* FAQ questions and answers stay visible without JavaScript. */
+.faqQuestion{display:block;background:#20382d;color:#f5f1e3;border:1px solid #45634f;padding:1rem;border-radius:.7rem}.faqAnswer{display:block!important;visibility:visible!important;background:#172a23;color:#d6e1d7;padding:1rem;margin:.4rem 0 1rem;border:1px solid #355143;border-radius:.7rem}.faqAnswer p{color:#d6e1d7}
+/* Mobile-first layout defaults, then tablet and desktop columns. */
+main{width:94%;margin:1.4rem auto}.hero{display:flex;flex-direction:column;align-items:stretch;gap:1.25rem;padding:1.25rem}.heroCard{width:100%}.cardGrid,.bottomGrid,.servicesSection,.form-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:1rem}.infoCard{min-width:0}.serviceList{display:flex;flex-direction:column;gap:.8rem}.serviceItem{display:flex;align-items:flex-start;gap:1rem}.heroButtons{display:flex;flex-wrap:wrap;gap:.65rem}
+@media(min-width:640px){main{width:92%;margin:2rem auto}.hero{padding:2rem}.cardGrid,.form-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.bottomGrid{grid-template-columns:repeat(2,minmax(0,1fr))}.servicesSection{grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr)}.heroCard{width:auto}}
+@media(min-width:960px){main{width:min(92%,1200px);margin:2.5rem auto}.hero{flex-direction:row;align-items:center;gap:2rem;padding:2.5rem}.heroText{flex:1}.heroCard{flex:0 0 280px}.cardGrid{grid-template-columns:repeat(3,minmax(0,1fr))}.servicesSection{grid-template-columns:minmax(250px,.7fr) minmax(0,1.3fr)}.form-grid.three-column{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
