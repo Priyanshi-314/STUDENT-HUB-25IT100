@@ -1,0 +1,9 @@
+# Editor and operating system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+# Local database and runtime data
+*.sqlite
+*.db
+*.log
