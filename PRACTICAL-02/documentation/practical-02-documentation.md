@@ -14,15 +14,14 @@ Home (`index.html`), About, Register, Login, Dashboard, Events, Profile, Contact
 - [x] Active page indicated in navigation
 - [x] Form fields use labels and suitable native input types
 - [x] FAQ content is visible without JavaScript
-- [x] Local page links resolve within this practical`r`n- [x] Every page links to the shared Practical 3 stylesheet
+- [x] Local page links resolve within this practical
+- [x] Every page links to the shared Practical 3 stylesheet
 
 ## Run
 Open `index.html` in a browser. Practical 2 uses semantic HTML and links to `../PRACTICAL-03/css/style.css` for its shared visual styling.
 
 ## Demonstration notes
-Forms do not submit to a service or store data. Use demonstration data only. Profile and event content is sample or unconfirmed information. No JavaScript or external dependency is used here.
+Forms do not submit to a service or store data. Use demonstration data only. Profile and event content is sample or unconfirmed information. Practical 4 adds its JavaScript interactions to this existing Home page; see the Practical 4 documentation.
 
 ## Screenshots
 The `screenshots/` folder is reserved for submission captures of the pages and accessibility inspection.
-
-

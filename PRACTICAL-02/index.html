@@ -5,15 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>StudentHub - Home</title>
   <link rel="stylesheet" href="../PRACTICAL-03/css/style.css">
+  <link rel="stylesheet" href="../PRACTICAL-04/css/interactions.css">
+  <script src="../PRACTICAL-04/js/script.js" defer></script>
 </head>
 
-<body>
+<body data-theme="light">
 <a class="skip-link" href="#main-content">Skip to main content</a>
-<header>
+<header class="studenthub-header">
+  <div class="brand-copy">
   <h1>🎓 StudentHub</h1>
   <p>Your campus information, services, and community in one place</p>
+  </div>
+  <div class="home-controls"><button class="theme-toggle" id="theme-toggle" type="button" aria-pressed="false">🌙 Use dark theme</button><button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav"><span class="menu-icon" aria-hidden="true">☰</span><span class="sr-only">Open navigation menu</span></button></div>
 </header>
-<nav aria-label="Primary navigation">
+<nav id="primary-nav" aria-label="Primary navigation" class="menu-collapsed">
       <a href="index.html" aria-current="page">Home</a>
       <a href="about.html">About</a>
       <a href="register.html">Register</a>
@@ -30,6 +35,7 @@
 
 
 <main id="main-content">
+    <section class="interactive-notice" id="updates" role="status" aria-labelledby="notice-title"><span class="notice-icon" aria-hidden="true">📢</span><div><p class="smallTitle">LATEST NOTICE</p><h2 id="notice-title">Welcome to StudentHub</h2><p>Explore campus services, upcoming activities, and helpful student resources from one place.</p></div><button id="dismiss-notice" class="notice-close" type="button" aria-label="Dismiss this notice">×</button></section>
 
     <!-- Hero Area -->
     <section class="hero">
@@ -43,7 +49,7 @@
                 college information, events and support services.
             </p>
 
-            <div class="heroButtons"><a class="button-link" href="register.html">Create an account</a> <a class="button-link secondary-link" href="events.html">Explore events</a></div>
+            <div class="heroButtons"><a class="button-link" href="register.html">Create an account</a> <a class="button-link secondary-link" href="events.html">Explore events</a> <button class="button-link secondary-link" id="open-announcement" type="button">Open announcement</button></div>
         </div>
 <div class="heroCard">
             <span>📚</span>
@@ -136,6 +142,7 @@
     </section>
 
 
+    <section class="interactive-slider" aria-labelledby="slider-title"><div class="sectionHeading"><p class="smallTitle">STUDENT SPOTLIGHT</p><h2 id="slider-title">Discover something new.</h2><p>Browse StudentHub highlights using the controls.</p></div><div class="slider-track" aria-live="polite" aria-atomic="true"><article class="spotlight-slide"><span class="spotlight-icon" aria-hidden="true">⌘</span><div><p class="smallTitle">LEARN</p><h3>Build practical skills</h3><p>Find workshops and learning sessions that connect classroom ideas with hands-on experience.</p></div><span class="slide-number">01</span></article><article class="spotlight-slide" hidden><span class="spotlight-icon" aria-hidden="true">✺</span><div><p class="smallTitle">CONNECT</p><h3>Meet your community</h3><p>Discover student clubs, creative activities, and ways to take part in campus life.</p></div><span class="slide-number">02</span></article><article class="spotlight-slide" hidden><span class="spotlight-icon" aria-hidden="true">◈</span><div><p class="smallTitle">EXPLORE</p><h3>Stay in the loop</h3><p>Check campus notices and event details in one organized student space.</p></div><span class="slide-number">03</span></article></div><div class="slider-controls"><p id="slide-status" aria-live="polite">Highlight 1 of 3</p><div><button id="previous-slide" type="button" aria-label="Show previous highlight">←</button><button id="next-slide" type="button" aria-label="Show next highlight">→</button></div></div></section>
     <!-- Student Services -->
     <section class="servicesSection">
 
@@ -205,6 +212,8 @@
     </section>
 
 
+    <section class="home-faq" aria-labelledby="home-faq-title"><div class="sectionHeading"><p class="smallTitle">QUICK ANSWERS</p><h2 id="home-faq-title">Questions students often ask</h2><p>Select a question to show or hide its answer.</p></div><article class="home-faq-item"><h3><button class="faq-toggle" type="button" aria-expanded="false" aria-controls="faq-answer-1" id="faq-question-1">What is StudentHub?<span aria-hidden="true">+</span></button></h3><div class="faq-answer" id="faq-answer-1" role="region" aria-labelledby="faq-question-1" hidden><p>StudentHub is a student portal concept that organizes campus information, student services, events, and support resources.</p></div></article><article class="home-faq-item"><h3><button class="faq-toggle" type="button" aria-expanded="false" aria-controls="faq-answer-2" id="faq-question-2">How do I find campus activities?<span aria-hidden="true">+</span></button></h3><div class="faq-answer" id="faq-answer-2" role="region" aria-labelledby="faq-question-2" hidden><p>Open the <a href="events.html">Events page</a> to browse event information. Confirm dates and registration details with official college announcements.</p></div></article><article class="home-faq-item"><h3><button class="faq-toggle" type="button" aria-expanded="false" aria-controls="faq-answer-3" id="faq-question-3">Will my theme preference be remembered?<span aria-hidden="true">+</span></button></h3><div class="faq-answer" id="faq-answer-3" role="region" aria-labelledby="faq-question-3" hidden><p>Yes. This page saves the selected light or dark theme in your browser on this device.</p></div></article></section>
+    <dialog id="announcement-dialog" aria-labelledby="dialog-title" aria-describedby="dialog-description"><div class="dialog-heading"><p class="smallTitle">STUDENTHUB ANNOUNCEMENT</p><button class="notice-close" id="close-announcement" type="button" aria-label="Close announcement">×</button></div><h2 id="dialog-title">Make room for something new.</h2><p id="dialog-description">Student activities can help you explore interests, meet people, and learn beyond the classroom. Visit official college channels to find current opportunities.</p><button class="button-link" id="dialog-done" type="button">Got it</button></dialog>
     <!-- Notice and Quick Access -->
     <section class="bottomGrid">
 

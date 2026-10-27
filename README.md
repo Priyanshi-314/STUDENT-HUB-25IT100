@@ -4,7 +4,7 @@
 StudentHub is a semester-long student portal project for the Web Development Frameworks (ITUE203) practicals. It begins with requirements and navigation planning, then builds independent, progressively enhanced practicals.
 
 ## Purpose
-This repository organizes the official practical work into separate folders. Practical 1 local planning artifacts are ready (GitHub remote pending); Practicals 2 and 3 are implemented. Practicals 4–14 remain pending.
+This repository organizes the official practical work into separate folders. Practicals 1–4 are implemented locally. GitHub publication is pending repository write access. Practicals 5–14 remain pending.
 
 ## Technologies across the practicals
 The official list uses HTML5, CSS3, CSS Grid, Flexbox, optional Bootstrap/Tailwind, JavaScript ES6+, JSON, Fetch API, PHP, CSV/JSON file storage, MySQL, MySQLi, PDO, sessions, and Git/GitHub. Only technologies required by each practical should be added to its folder.
@@ -17,7 +17,7 @@ STUDENT HUB/
 ├── PRACTICAL-01/  # planning artifacts and documentation
 ├── PRACTICAL-02/  # 11 static semantic HTML5 pages
 ├── PRACTICAL-03/  # responsive CSS Grid/Flexbox pages and documentation
-├── PRACTICAL-04/  # reserved; implementation pending
+├── PRACTICAL-04/  # interaction CSS/JS used by the Practical 2 Home page
 ├── PRACTICAL-05/  # reserved; implementation pending
 ├── PRACTICAL-06/  # reserved; implementation pending
 ├── PRACTICAL-07/  # reserved; implementation pending
@@ -30,16 +30,16 @@ STUDENT HUB/
 ├── PRACTICAL-14/  # reserved; implementation pending
 ```
 
-Practicals 4–14 contain only their reserved top-level directories until implementation begins. Practicals 1–3 have separate documentation and screenshots folders; the root README is the single common README.
+Practicals 5–14 contain only their reserved top-level directories until implementation begins. Practicals 1–3 have separate documentation and screenshots folders; the root README is the single common README.
 
 ## Official practical list and status
 
 | No. | Official practical title | Brief description | Status |
 |---:|---|---|---|
-| 1 | Project Initiation, Requirement Analysis, Sitemap, Wireframe, and GitHub Setup | Initiate the semester-long StudentHub portal: define scope, roles, modules, navigation, at least 10 pages; create sitemap, low-fidelity wireframes, folder structure, README, and GitHub repository. | Implemented (planning artifacts and GitHub repository initialized) |
+| 1 | Project Initiation, Requirement Analysis, Sitemap, Wireframe, and GitHub Setup | Initiate the semester-long StudentHub portal: define scope, roles, modules, navigation, at least 10 pages; create sitemap, low-fidelity wireframes, folder structure, README, and GitHub repository. | Ready (planning artifacts complete; GitHub publication pending access) |
 | 2 | Semantic HTML5 Pages with Accessibility-Ready Structure | Create at least 10 linked static StudentHub pages using semantic HTML5 and accessibility-friendly structure. | Implemented (11 pages linked to the shared Practical 3 stylesheet) |
 | 3 | Responsive UI Design using CSS Grid, Flexbox, and Bootstrap/Tailwind | Design mobile-first responsive layouts using CSS Grid and Flexbox; Bootstrap or Tailwind is optional. | Implemented (five responsive pages; Grid/Flexbox checks passed; screenshots pending) |
-| 4 | JavaScript DOM Manipulation, Event Handling, and UI Interactivity | Add DOM-driven UI components, event handling, theme persistence, and accessible interaction. | Pending |
+| 4 | JavaScript DOM Manipulation, Event Handling, and UI Interactivity | Add an FAQ toggle, modal, content slider, dismissible notification, hamburger menu, and persistent light/dark theme. | Implemented on the existing Practical 2 Home page (JavaScript syntax passes; manual interaction screenshots pending) |
 | 5 | Registration Form with Frontend Validation and User-Friendly Error Handling | Build a student registration form with the specified fields, regular-expression validation, and friendly error handling. | Pending |
 | 6 | Rendering External JSON Data using Fetch API, Search and Filter | Fetch external JSON data and implement rendering, search, filter, sorting, pagination, loading, and error states. | Pending |
 | 7 | PHP Form Processing with Server-Side Validation and CSV/JSON File Storage | Process PHP POST forms with server-side validation and sanitization; save records as CSV or JSON. | Pending |
@@ -62,23 +62,17 @@ Practicals 4–14 contain only their reserved top-level directories until implem
 1. Open a practical folder and follow its `documentation/practical-XX-documentation.md`.
 2. For Practical 2, open `PRACTICAL-02/index.html` in a browser. Its pages use semantic HTML and link to the shared stylesheet in `PRACTICAL-03/css/style.css`.
 3. For Practical 3, open `PRACTICAL-03/index.html`; its local CSS stylesheet adds the responsive layouts and forest-green/warm-gold theme.
-3. PHP/MySQL practicals will need to run under their local server/database environment; consult the relevant practical documentation after implementation.
+4. For Practical 4, open `PRACTICAL-02/index.html`. Practical 4 interactions run on that existing Home page using CSS and JavaScript from `PRACTICAL-04/`.
+5. PHP/MySQL practicals will need to run under their local server/database environment; consult the relevant practical documentation after implementation.
 
 ## Screenshots and documentation
 Store submission screenshots in the relevant `PRACTICAL-XX/screenshots/` directory. Keep explanations, checklists, and run instructions in that practical's `documentation/` directory. The Practical 1 sitemap and wireframes are in its `assets/` directory.
 
 ## Database setup
-No database is required for Practicals 1, 2, or 3. Database schema and setup instructions will be added alongside the applicable later practicals; no database has been invented for this phase.
+No database is required for Practicals 1, 2, 3, or 4. Database schema and setup instructions will be added alongside the applicable later practicals; no database has been invented for this phase.
 
 ## Local running notes
 Practical 2 pages link to the shared stylesheet stored in Practical 3. Practical 3 uses a forest-green and warm-gold theme and implements responsive layouts. Forms remain static demonstrations and do not create accounts. Use a local web server when a browser's security rules require HTTP rather than `file://` URLs.
 
 ## Practical 15 note
 The supplied PDF's summary also lists Practical 15, “Final Integration, Testing, Documentation, Submission, and Local Deployment.” The detailed list contains its title and hours only. This project follows the requested 14-folder scope; Practical 15 is not included in the status table or implemented here.
-
-
-
-
-
-
-
