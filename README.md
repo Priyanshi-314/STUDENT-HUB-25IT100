@@ -68,7 +68,8 @@ Practicals 9–14 remain reserved for later implementation. Completed practicals
 6. For Practical 6, run py -m http.server 8000 from the project root, then open http://localhost:8000/PRACTICAL-02/events.html; its JSON and browser files are in PRACTICAL-06/.
 7. For Practical 7, run the PHP server from the project root with the Practical 7 router; the Register and Contact forms POST to its JSON handler.
 
-8. For Practical 8, start MySQL, import PRACTICAL-08/sql/studenthub.sql in phpMyAdmin, then open PRACTICAL-02/dashboard.html and select the PDO connection check.`n9. Practicals 9–14 remain pending.
+8. For Practical 8, start MySQL, import PRACTICAL-08/sql/studenthub.sql in phpMyAdmin, then open PRACTICAL-02/dashboard.html and select the PDO connection check.
+9. Practicals 9–14 remain pending.
 
 ## Screenshots and documentation
 Store submission screenshots in the relevant `PRACTICAL-XX/screenshots/` directory. Keep explanations, checklists, and run instructions in that practical's `documentation/` directory. The Practical 1 sitemap and wireframes are in its `assets/` directory.
