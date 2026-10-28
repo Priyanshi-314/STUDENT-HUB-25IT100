@@ -26,7 +26,7 @@ try {
 <body>
 <a class="skip-link" href="#main-content">Skip to main content</a>
 <header><h1>🎓 StudentHub</h1><p>Practical 8 · MySQL and PDO connection</p></header>
-<nav aria-label="Primary navigation"><a href="../PRACTICAL-02/index.html">Home</a><a href="../PRACTICAL-02/dashboard.html">Dashboard</a><a href="../PRACTICAL-02/events.html">Events</a></nav>
+<nav aria-label="Primary navigation"><a href="../PRACTICAL-02/index.html">Home</a><a href="../PRACTICAL-02/dashboard.php">Dashboard</a><a href="../PRACTICAL-02/events.html">Events</a></nav>
 <main id="main-content">
   <section class="hero"><div class="heroText">
     <?php if ($errorMessage === ''): ?>
@@ -39,7 +39,7 @@ try {
       <h2>MySQL is not ready yet.</h2>
       <p><?= htmlspecialchars($errorMessage, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8') ?></p>
     <?php endif; ?>
-    <div class="heroButtons"><a class="button-link" href="../PRACTICAL-02/dashboard.html">Back to Dashboard</a><a class="button-link secondary-link" href="sql/studenthub.sql">View schema and seed SQL</a></div>
+    <div class="heroButtons"><a class="button-link" href="../PRACTICAL-02/dashboard.php">Back to Dashboard</a><a class="button-link secondary-link" href="sql/studenthub.sql">View schema and seed SQL</a></div>
   </div><aside class="heroCard"><span aria-hidden="true">🗄️</span><h3>Normalized data model</h3><p>Students and events are stored once; registrations connect them through foreign keys.</p></aside></section>
 </main>
 <footer><p>© 2026 StudentHub · Practical 8</p></footer>

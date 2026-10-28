@@ -1,3 +1,10 @@
+<?php
+declare(strict_types=1);
+
+require_once __DIR__ . '/../PRACTICAL-10/session.php';
+sh_boot();
+$csrfToken = sh_csrf_token();
+?>
 <!DOCTYPE html>
 <html lang="en-IN">
 
@@ -27,13 +34,13 @@
     <nav aria-label="Primary navigation">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
-        <a href="register.html" aria-current="page">Register</a>
-        <a href="login.html">Login</a>
-        <a href="dashboard.html">Dashboard</a>
+        <a href="register.php" aria-current="page">Register</a>
+        <a href="login.php">Login</a>
+        <a href="dashboard.php">Dashboard</a>
         <a href="events.html">Events</a>
         <a href="profile.html">Profile</a>
         <a href="contact.html">Contact</a>
-        <a href="admin.html">Admin</a>
+        <a href="admin.php">Admin</a>
         <a href="faq.html">FAQ</a>
         <a href="feedback.html">Feedback</a>
     </nav>
@@ -76,8 +83,8 @@
             </div>
 
 
-            <form id="registrationForm" action="../PRACTICAL-07/process-submission.php" method="post" novalidate>
-                <input type="hidden" name="form_type" value="registration">
+            <form id="registrationForm" action="../PRACTICAL-09/register.php" method="post" novalidate>
+                <input type="hidden" name="csrf_token" value="<?= htmlspecialchars($csrfToken, ENT_QUOTES, 'UTF-8') ?>">
 
 
                 <!-- ================= PERSONAL DETAILS ================= -->
@@ -112,6 +119,12 @@
                         </div>
 
 
+                        <!-- Username is used for sign-in and checked for duplicates on the server. -->
+                        <div class="form-group">
+                            <label for="username">Username <span>*</span></label>
+                            <input type="text" id="username" name="username" minlength="4" maxlength="24" pattern="[A-Za-z0-9._-]{4,24}" autocomplete="username" aria-describedby="usernameError" placeholder="Choose 4–24 letters or numbers" required>
+                            <small id="usernameError" class="error-message"></small>
+                        </div>
                         <!-- Email -->
 
                         <div class="form-group">
@@ -582,10 +595,7 @@
                         >
 
                         <span>
-                            I understand this is a static
-                            <strong>demonstration form notice</strong>
-                            and confirm that the information provided
-                            is correct. <span>*</span>
+                            I agree that StudentHub may use these details to create my student account and confirm that the information provided is correct. <span>*</span>
                         </span>
 
                     </label>
@@ -647,7 +657,7 @@
                 managing your student activities.
             </p>
 
-            <a href="login.html">
+            <a href="login.php">
                 Go to Login →
             </a>
 

@@ -1,10 +1,10 @@
 # Practical 7: PHP Form Processing with Server-Side Validation and CSV/JSON File Storage
 
 ## Objective
-Connect the existing StudentHub Register and Contact forms to one PHP POST processor. The processor validates and sanitizes each submitted field, safely appends valid submissions to a JSON file, and returns clear success or error messages.
+Demonstrate PHP POST processing for StudentHub registration and Contact data with server-side checks and JSON file storage. Practical 9 later upgrades the existing Register page to secure database registration. The processor validates and sanitizes each submitted field, safely appends valid submissions to a JSON file, and returns clear success or error messages.
 
 ## Existing page connectivity
-- PRACTICAL-02/register.html keeps Practical 5's JavaScript checks, then posts valid data to PRACTICAL-07/process-submission.php.
+- The existing Contact page posts to this handler. The earlier registration flow used this handler; the connected registration page now uses Practical 9 to create hashed-password accounts.
 - PRACTICAL-02/contact.html posts contact messages to the same handler.
 - The handler links back to the StudentHub pages and uses the shared Practical 3 stylesheet.
 - Password and confirmation are checked on the server but deliberately never written to storage.
@@ -17,7 +17,7 @@ From the StudentHub project root, run the PHP 8 server with the Practical 7 rout
 
     C:\xampp\php\php.exe -S 127.0.0.1:8000 -t . PRACTICAL-07/router.php
 
-Open http://127.0.0.1:8000/PRACTICAL-02/register.html or contact.html. Keep this terminal open while submitting. Valid submissions appear in the handler response and JSON file. No MySQL connection is needed for Practical 7.
+Open http://127.0.0.1:8000/PRACTICAL-02/contact.html. Keep this terminal open while submitting. Valid contact submissions appear in the handler response and JSON file. No MySQL connection is needed for Practical 7.
 
 ## Test cases
 1. Submit registration with missing fields, invalid email/mobile, weak password, mismatched passwords, missing gender, or unaccepted terms: server returns field errors and saves nothing.

@@ -39,13 +39,13 @@ The registrations table resolves the many-to-many relationship between students 
 - `sql/studenthub.sql` creates the database, normalized tables, primary/foreign/unique keys, indexes, and synthetic seed rows.
 - `db.php` creates a PDO connection with UTF-8, exceptions, associative fetches, and native prepared statements.
 - `connection-test.php` runs a parameterized count query and shows a friendly connection result.
-- The existing `PRACTICAL-02/dashboard.html` links to the connection check.
+- The existing `PRACTICAL-02/dashboard.php` links to the connection check.
 
 ## Setup with XAMPP
 1. Start MySQL in the XAMPP Control Panel.
 2. Open phpMyAdmin at `http://localhost/phpmyadmin` and import `PRACTICAL-08/sql/studenthub.sql` using the Import tab.
 3. The default local settings are host `127.0.0.1`, port `3306`, database `studenthub`, user `root`, and an empty password. `db.php` also accepts `STUDENTHUB_DB_HOST`, `STUDENTHUB_DB_PORT`, `STUDENTHUB_DB_NAME`, `STUDENTHUB_DB_USER`, and `STUDENTHUB_DB_PASSWORD` environment variables. Use local-only credentials; do not commit passwords.
-4. Run the PHP server from the project root using the Practical 7 router, then open `http://127.0.0.1:8000/PRACTICAL-02/dashboard.html` and choose the PDO connection check.
+4. Run the PHP server from the project root using the Practical 7 router, then sign in with the demo student account, open `http://127.0.0.1:8000/PRACTICAL-02/dashboard.php`, and choose the PDO connection check.
 
 PowerShell server command:
 

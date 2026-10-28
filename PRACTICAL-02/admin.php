@@ -1,4 +1,9 @@
-<!DOCTYPE html>
+<?php
+declare(strict_types=1);
+require_once __DIR__ . '/../PRACTICAL-10/session.php';
+$user = sh_require_role('admin');
+$csrfToken = sh_csrf_token();
+?><!DOCTYPE html>
 <html lang="en-IN">
 
 <head>
@@ -19,13 +24,13 @@
   <nav aria-label="Primary navigation">
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
-    <a href="register.html">Register</a>
-    <a href="login.html">Login</a>
-    <a href="dashboard.html">Dashboard</a>
+    <a href="register.php">Register</a>
+    <a href="login.php">Login</a>
+    <a href="dashboard.php">Dashboard</a>
     <a href="events.html">Events</a>
     <a href="profile.html">Profile</a>
     <a href="contact.html">Contact</a>
-    <a href="admin.html" aria-current="page">Admin</a>
+    <a href="admin.php" aria-current="page">Admin</a>
     <a href="faq.html">FAQ</a>
     <a href="feedback.html">Feedback</a>
 </nav>
@@ -34,7 +39,7 @@
 
         <section>
             <h2>Admin Dashboard</h2>
-            <p>Static administration page preview. A real admin area must verify administrator access on the server before showing student records or management controls.</p>
+            <p>You are signed in as <?= htmlspecialchars($user['username'], ENT_QUOTES, 'UTF-8') ?> with the administrator role. This page is protected by server-side role checks.</p>
         </section>
 
         <article>
@@ -59,6 +64,7 @@
     <footer>
         <p>&copy; 2026 StudentHub. All Rights Reserved.</p>
         <p>Email: support@studenthub.com</p>
+        <form action="../PRACTICAL-10/logout.php" method="post"><input type="hidden" name="csrf_token" value="<?= htmlspecialchars($csrfToken, ENT_QUOTES, 'UTF-8') ?>"><button type="submit">Sign out</button></form>
     </footer>
 
 </body>

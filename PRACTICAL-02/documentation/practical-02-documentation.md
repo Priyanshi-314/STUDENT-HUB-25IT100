@@ -4,7 +4,7 @@
 Create at least 10 linked static StudentHub pages using semantic HTML5 and accessibility-friendly structure.
 
 ## Pages
-Home (`index.html`), About, Register, Login, Dashboard, Events, Profile, Contact, Admin, FAQ, and Feedback. All 11 pages use consistent semantic header, navigation, main-content, and footer regions, link to one another with relative paths, and share the Practical 3 stylesheet.
+Home (`index.html`), About, Register, Login, Dashboard, Events, Profile, Contact, Admin, FAQ, and Feedback. All 11 pages use consistent semantic header, navigation, main-content, and footer regions, link to one another with relative paths, and share the Practical 3 stylesheet. Register and Login, plus the student Dashboard and Admin page, use PHP so Practicals 9 and 10 can connect their forms and server-side access checks to these same pages.
 
 ## Accessibility checklist
 - [x] HTML5 document type and English language metadata
@@ -18,10 +18,10 @@ Home (`index.html`), About, Register, Login, Dashboard, Events, Profile, Contact
 - [x] Every page links to the shared Practical 3 stylesheet
 
 ## Run
-Open `index.html` in a browser. Practical 2 uses semantic HTML and links to `../PRACTICAL-03/css/style.css` for its shared visual styling.
+Open `index.html` in a browser for public pages. Run PHP and MySQL for `register.php`, `login.php`, `dashboard.php`, and `admin.php`. Practical 2 uses the shared `../PRACTICAL-03/css/style.css` visual styling.
 
 ## Demonstration notes
-Forms do not submit to a service or store data. Use demonstration data only. Profile and event content is sample or unconfirmed information. Practical 4 adds its JavaScript interactions to this existing Home page; see the Practical 4 documentation.
+Contact and feedback content is a demonstration. Registration and sign-in are connected by Practicals 9 and 10. Profile and event content is sample or unconfirmed information. Practical 4 adds its JavaScript interactions to this existing Home page; see the Practical 4 documentation.
 
 ## Screenshots
 The `screenshots/` folder is reserved for submission captures of the pages and accessibility inspection.

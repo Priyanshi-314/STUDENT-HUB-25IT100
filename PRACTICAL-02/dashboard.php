@@ -1,4 +1,9 @@
-<!DOCTYPE html>
+<?php
+declare(strict_types=1);
+require_once __DIR__ . '/../PRACTICAL-10/session.php';
+$user = sh_require_role('student');
+$csrfToken = sh_csrf_token();
+?><!DOCTYPE html>
 <html lang="en-IN">
 
 <head>
@@ -14,18 +19,20 @@
     <header>
         <h1>StudentHub</h1>
         <p>Student Dashboard</p>
+        <p>Signed in as <?= htmlspecialchars($user['username'], ENT_QUOTES, 'UTF-8') ?></p>
+        <form action="../PRACTICAL-10/logout.php" method="post"><input type="hidden" name="csrf_token" value="<?= htmlspecialchars($csrfToken, ENT_QUOTES, 'UTF-8') ?>"><button type="submit">Sign out</button></form>
     </header>
 
 <nav aria-label="Primary navigation">
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
-    <a href="register.html">Register</a>
-    <a href="login.html">Login</a>
-    <a href="dashboard.html" aria-current="page">Dashboard</a>
+    <a href="register.php">Register</a>
+    <a href="login.php">Login</a>
+    <a href="dashboard.php" aria-current="page">Dashboard</a>
     <a href="events.html">Events</a>
     <a href="profile.html">Profile</a>
     <a href="contact.html">Contact</a>
-    <a href="admin.html">Admin</a>
+    <a href="admin.php">Admin</a>
     <a href="faq.html">FAQ</a>
     <a href="feedback.html">Feedback</a>
 </nav>
@@ -33,7 +40,7 @@
 
         <section>
             <h2>Welcome to Your Dashboard</h2>
-            <p>Welcome, Student! This static dashboard preview groups academic links, campus updates, and student resources. All details are illustrative.</p>
+            <p>Welcome back, <?= htmlspecialchars($user['full_name'], ENT_QUOTES, 'UTF-8') ?>. Your student resources and campus updates are gathered here.</p>
         </section>
 
         <section class="db-practical-link">

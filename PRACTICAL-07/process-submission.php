@@ -47,7 +47,7 @@ function saveSubmission(string $type, array $payload): void
 $errors = [];
 $requestMethod = $_SERVER['REQUEST_METHOD'] ?? 'GET';
 $formType = $requestMethod === 'POST' ? cleanField('form_type', 30) : '';
-$returnPage = $formType === 'contact' ? 'contact.html' : 'register.html';
+$returnPage = $formType === 'contact' ? 'contact.html' : 'register.php';
 $successMessage = '';
 
 if ($requestMethod !== 'POST') {
@@ -129,7 +129,7 @@ $isSuccess = !$errors;
 <body>
 <a class="skip-link" href="#main-content">Skip to main content</a>
 <header><h1>🎓 StudentHub</h1><p>Secure form processing demonstration</p></header>
-<nav aria-label="Primary navigation"><a href="../PRACTICAL-02/index.html">Home</a><a href="../PRACTICAL-02/register.html">Register</a><a href="../PRACTICAL-02/contact.html">Contact</a><a href="../PRACTICAL-02/dashboard.html">Dashboard</a></nav>
+<nav aria-label="Primary navigation"><a href="../PRACTICAL-02/index.html">Home</a><a href="../PRACTICAL-02/register.php">Register</a><a href="../PRACTICAL-02/contact.html">Contact</a><a href="../PRACTICAL-02/dashboard.php">Dashboard</a></nav>
 <main id="main-content">
   <section class="hero"><div class="heroText">
     <p class="smallTitle"><?= $isSuccess ? 'SAVED SUCCESSFULLY' : 'PLEASE REVIEW YOUR FORM' ?></p>

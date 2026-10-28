@@ -6,13 +6,14 @@ const strength = document.querySelector("#passwordStrength");
 const genderOptions = [...form.querySelectorAll('input[name="gender"]')];
 const rules = {
   name: ["#name", "#nameError", value => /^[\p{L}][\p{L}\p{M} .'-]{1,59}$/u.test(value.trim()) || "Enter your name using at least 2 letters."],
+  username: ["#username", "#usernameError", value => /^[A-Za-z0-9._-]{4,24}$/.test(value.trim()) || "Use 4 to 24 letters, numbers, dots, underscores, or hyphens."],
   email: ["#email", "#emailError", value => /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(value.trim()) || "Enter a valid email address, such as name@example.com."],
   phone: ["#phone", "#phoneError", value => /^[6-9]\d{9}$/.test(value.trim()) || "Enter a 10-digit Indian mobile number starting with 6, 7, 8, or 9."],
   course: ["#course", "#courseError", value => Boolean(value) || "Choose your course."],
   year: ["#year", "#yearError", value => Boolean(value) || "Choose your current year of study."],
   password: ["#password", "#passwordError", value => /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^A-Za-z0-9\s])\S{8,}$/.test(value) || "Use at least 8 characters with uppercase, lowercase, a number, and a symbol."],
   confirm: ["#confirm", "#confirmError", value => value.length > 0 && value === password.value || "Enter the same password again."],
-  terms: ["#terms", "#formNotice", checked => checked || "Please accept the demonstration form notice to continue."]
+  terms: ["#terms", "#formNotice", checked => checked || "Confirm that you agree to create a StudentHub account."]
 };
 const fields = Object.fromEntries(Object.entries(rules).map(([name, [input, error, validate]]) => [name, { input: document.querySelector(input), error: document.querySelector(error), validate }]));
 
