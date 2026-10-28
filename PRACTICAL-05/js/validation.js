@@ -77,7 +77,7 @@ form.addEventListener("submit", event => {
     (form.querySelector('[aria-invalid="true"]')?.matches("input, select, textarea") ? form.querySelector('[aria-invalid="true"]') : genderOptions[0]).focus();
     return;
   }
-  success.textContent = "Your form passed validation. This is a frontend demonstration; no account was created and no data was sent or stored.";
+  form.submit();
 });
 form.addEventListener("reset", () => window.setTimeout(() => {
   Object.values(fields).forEach(field => { field.error.textContent = ""; field.input.removeAttribute("aria-invalid"); });

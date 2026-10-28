@@ -37,19 +37,20 @@
 
             <p>If you have any questions or need assistance, feel free to contact us.</p>
 
-            <form>
+            <form action="../PRACTICAL-07/process-submission.php" method="post">
+                <input type="hidden" name="form_type" value="contact">
 
                 <label for="name">Full Name:</label><br>
-                <input type="text" id="name" name="name"><br><br>
+                <input type="text" id="name" name="name" autocomplete="name" minlength="2" maxlength="100" required><br><br>
 
                 <label for="email">Email:</label><br>
-                <input type="email" id="email" name="email"><br><br>
+                <input type="email" id="email" name="email" autocomplete="email" maxlength="190" required><br><br>
 
                 <label for="subject">Subject:</label><br>
-                <input type="text" id="subject" name="subject"><br><br>
+                <input type="text" id="subject" name="subject" minlength="3" maxlength="120" required><br><br>
 
                 <label for="message">Message:</label><br>
-                <textarea id="message" name="message" rows="5" cols="40"></textarea><br><br>
+                <textarea id="message" name="message" rows="5" cols="40" minlength="10" maxlength="3000" required></textarea><br><br>
 
                 <input type="submit" value="Send Message">
                 <input type="reset" value="Clear">

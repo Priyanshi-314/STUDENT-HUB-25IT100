@@ -76,7 +76,8 @@
             </div>
 
 
-            <form id="registrationForm" novalidate>
+            <form id="registrationForm" action="../PRACTICAL-07/process-submission.php" method="post" novalidate>
+                <input type="hidden" name="form_type" value="registration">
 
 
                 <!-- ================= PERSONAL DETAILS ================= -->
@@ -521,7 +522,7 @@
                                 <input
                                     type="checkbox"
                                     id="reading"
-                                    name="hobbies"
+                                    name="hobbies[]"
                                     value="reading"
                                 >
                                 📚 Reading
@@ -531,7 +532,7 @@
                                 <input
                                     type="checkbox"
                                     id="sports"
-                                    name="hobbies"
+                                    name="hobbies[]"
                                     value="sports"
                                 >
                                 ⚽ Sports
@@ -541,7 +542,7 @@
                                 <input
                                     type="checkbox"
                                     id="music"
-                                    name="hobbies"
+                                    name="hobbies[]"
                                     value="music"
                                 >
                                 🎵 Music
@@ -551,7 +552,7 @@
                                 <input
                                     type="checkbox"
                                     id="coding"
-                                    name="hobbies"
+                                    name="hobbies[]"
                                     value="coding"
                                 >
                                 💻 Coding
@@ -575,6 +576,7 @@
                             type="checkbox"
                             id="terms"
                             name="terms"
+                            value="accepted"
                             aria-describedby="formNotice"
                             required
                         >
