@@ -7,6 +7,8 @@
 
     <title>StudentHub - Register</title>
   <link rel="stylesheet" href="../PRACTICAL-03/css/style.css">
+  <link rel="stylesheet" href="../PRACTICAL-05/css/registration.css">
+  <script src="../PRACTICAL-05/js/validation.js" defer></script>
 </head>
 
 <body>
@@ -74,7 +76,7 @@
             </div>
 
 
-            <form id="registrationForm" action="#" method="get">
+            <form id="registrationForm" novalidate>
 
 
                 <!-- ================= PERSONAL DETAILS ================= -->
@@ -144,6 +146,8 @@
                                 type="tel"
                                 id="phone"
                                 name="phone"
+                                pattern="[6-9][0-9]{9}"
+                                title="Enter a 10-digit Indian mobile number beginning with 6, 7, 8, or 9"
                                 placeholder="Enter 10-digit mobile number"
                                 inputmode="numeric"
                                 maxlength="10"
@@ -338,7 +342,7 @@
 
                     <div class="form-group">
 
-                        <fieldset>
+                        <fieldset aria-describedby="genderError">
 
                             <legend>
                                 Gender <span>*</span>
@@ -351,6 +355,7 @@
                                         type="radio"
                                         name="gender"
                                         value="male"
+                                        required
                                     >
                                     Male
                                 </label>
@@ -415,6 +420,7 @@
                                 type="password"
                                 id="password"
                                 name="password"
+                                minlength="8"
                                 placeholder="Create a strong password"
                                 autocomplete="new-password"
                                 aria-describedby="passwordError passwordStrength"
@@ -424,6 +430,8 @@
                             <div
                                 id="passwordStrength"
                                 class="password-strength"
+                                role="status"
+                                aria-live="polite"
                             >
                                 Password strength will appear here
                             </div>
@@ -448,6 +456,7 @@
                                 type="password"
                                 id="confirm"
                                 name="confirm"
+                                minlength="8"
                                 placeholder="Re-enter your password"
                                 autocomplete="new-password"
                                 aria-describedby="confirmError"
@@ -614,7 +623,7 @@
                 <div
                     id="formSuccess"
                     class="success-message"
-                    role="alert"
+                    role="status"
                     aria-live="polite"
                 ></div>
 
@@ -662,10 +671,7 @@
     </footer>
 
 
-    <!-- JavaScript -->
-
-    
-
+    <!-- Practical 5 validation is loaded in the document head. -->
 </body>
 
 </html>

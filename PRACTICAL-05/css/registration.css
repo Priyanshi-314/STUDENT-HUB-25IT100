@@ -1,0 +1,16 @@
+/* Practical 5 additions follow StudentHub's shared green palette. */
+.registration-container { max-width: 920px; margin: 1.5rem auto; }
+#registrationForm { display: grid; gap: 1.1rem; }
+#registrationForm input:not([type="radio"]):not([type="checkbox"]), #registrationForm select, #registrationForm textarea { width: 100%; }
+#registrationForm input[aria-invalid="true"], #registrationForm select[aria-invalid="true"] { border-color: #b42318; box-shadow: 0 0 0 2px rgba(180,35,24,.12); }
+#registrationForm fieldset[aria-invalid="true"] { border-color: #b42318; }
+#registrationForm .error-message { display: block; min-height: 1.25em; color: #a11b16; font-size: .88rem; }
+#registrationForm .error-message:empty { display: none; }
+#registrationForm .password-strength { margin-top: .4rem; color: var(--text-secondary); font-size: .9rem; }
+#registrationForm .password-strength[data-level="weak"] { color: #a11b16; --strength-width: 30%; --strength-color: #c34338; }
+#registrationForm .password-strength[data-level="fair"] { color: #805b06; --strength-width: 65%; --strength-color: #bd8a20; }
+#registrationForm .password-strength[data-level="strong"] { color: #17633f; --strength-width: 100%; --strength-color: #28744e; }
+#registrationForm .password-strength::before { content: ""; display: block; width: var(--strength-width, 0%); height: 5px; margin: .4rem 0; border-radius: 9px; background: var(--strength-color, var(--border)); transition: width .2s ease; }
+#formSuccess { padding: .9rem 1rem; border-radius: .75rem; background: #e7f3eb; color: #174c32; }
+#formSuccess:empty { display: none; }
+@media (prefers-reduced-motion: reduce) { #registrationForm .password-strength::before { transition: none; } }
