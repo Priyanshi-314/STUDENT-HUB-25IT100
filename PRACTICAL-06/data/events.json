@@ -1,0 +1,122 @@
+[
+  {
+    "title": "Web Design Studio",
+    "location": "Innovation Lab",
+    "id": 1,
+    "description": "Practice accessible page layouts and responsive design using HTML and CSS.",
+    "date": "2026-11-04",
+    "category": "Workshop"
+  },
+  {
+    "title": "Campus Code Sprint",
+    "location": "Computing Lab 2",
+    "id": 2,
+    "description": "Solve beginner-friendly programming challenges in a small team.",
+    "date": "2026-11-08",
+    "category": "Competition"
+  },
+  {
+    "title": "Student Club Open House",
+    "location": "Central Courtyard",
+    "id": 3,
+    "description": "Meet student clubs and learn about their activities.",
+    "date": "2026-11-12",
+    "category": "Community"
+  },
+  {
+    "title": "Intro to Git and GitHub",
+    "location": "Seminar Room A",
+    "id": 4,
+    "description": "Learn commits, branches, and a simple collaboration workflow.",
+    "date": "2026-11-16",
+    "category": "Workshop"
+  },
+  {
+    "title": "Career Readiness Talk",
+    "location": "Auditorium",
+    "id": 5,
+    "description": "Explore CV preparation and interview practice for technology roles.",
+    "date": "2026-11-20",
+    "category": "Talk"
+  },
+  {
+    "title": "UI Design Jam",
+    "location": "Design Studio",
+    "id": 6,
+    "description": "Create a small interface concept around a student-life prompt.",
+    "date": "2026-11-24",
+    "category": "Competition"
+  },
+  {
+    "title": "Open Source Hour",
+    "location": "Library Learning Zone",
+    "id": 7,
+    "description": "Explore beginner-friendly ways to contribute to open-source projects.",
+    "date": "2026-11-28",
+    "category": "Community"
+  },
+  {
+    "title": "Cyber Safety Basics",
+    "location": "Seminar Room B",
+    "id": 8,
+    "description": "Review practical steps for safer passwords and account use.",
+    "date": "2026-12-02",
+    "category": "Workshop"
+  },
+  {
+    "title": "Project Showcase Meetup",
+    "location": "Innovation Lab",
+    "id": 9,
+    "description": "Share a class project and exchange constructive feedback.",
+    "date": "2026-12-06",
+    "category": "Community"
+  },
+  {
+    "title": "Data Skills Session",
+    "location": "Computing Lab 1",
+    "id": 10,
+    "description": "Practice organizing and summarizing a small sample dataset.",
+    "date": "2026-12-10",
+    "category": "Workshop"
+  },
+  {
+    "title": "Student Tech Quiz",
+    "location": "Auditorium",
+    "id": 11,
+    "description": "Take part in a friendly quiz on web and computing basics.",
+    "date": "2026-12-14",
+    "category": "Competition"
+  },
+  {
+    "title": "Alumni Q and A",
+    "location": "Seminar Room A",
+    "id": 12,
+    "description": "Hear sample career journeys and prepare questions for alumni guests.",
+    "date": "2026-12-18",
+    "category": "Talk"
+  },
+  {
+    "title": "Accessibility Review Meetup",
+    "location": "Design Studio",
+    "id": 13,
+    "description": "Try keyboard navigation and contrast checks on sample pages.",
+    "date": "2027-01-08",
+    "category": "Workshop"
+  },
+  {
+    "title": "Wellbeing and Study Skills",
+    "location": "Student Centre",
+    "id": 14,
+    "description": "Discuss study planning and campus support resources.",
+    "date": "2027-01-12",
+    "category": "Talk"
+  },
+  {
+    "title": "Portfolio Feedback Desk",
+    "location": "Library Learning Zone",
+    "id": 15,
+    "description": "Bring a draft portfolio for peer review and improvement suggestions.",
+    "date": "2027-01-16",
+    "category": "Community"
+  }
+]

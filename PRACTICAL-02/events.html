@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>StudentHub - Events</title>
   <link rel="stylesheet" href="../PRACTICAL-03/css/style.css">
+  <link rel="stylesheet" href="../PRACTICAL-06/css/data-browser.css">
+  <script src="../PRACTICAL-06/js/data-browser.js" defer></script>
 </head>
 
 <body>
@@ -29,38 +31,25 @@
     <a href="feedback.html">Feedback</a>
 </nav>
     <main id="main-content">
-
-        <section>
-            <h2>Upcoming College Events · Sample Listings</h2>
-
-            <article>
-                <h3>Web Development Workshop</h3>
-                <p><strong>Date:</strong> To be announced (sample listing)</p>
-                <p>Learn the basics of HTML, CSS, and JavaScript through hands-on sessions.</p>
-            </article>
-
-            <article>
-                <h3>Hackathon 2026</h3>
-                <p><strong>Date:</strong> To be announced (sample listing)</p>
-                <p>Participate in a 24-hour coding competition and showcase your skills.</p>
-            </article>
-
-            <article>
-                <h3>Sports Day</h3>
-                <p><strong>Date:</strong> To be announced (sample listing)</p>
-                <p>Enjoy indoor and outdoor sports competitions with fellow students.</p>
-            </article>
-        </section>
-
-        <aside>
-            <h3>Event Notice</h3>
-            <p>
-                Event descriptions and dates are examples. Check official college announcements for confirmed schedules and registration details.
-            </p>
-        </aside>
-
+      <section class="data-intro" aria-labelledby="data-title">
+        <p class="data-eyebrow">STUDENTHUB DATA EXPLORER</p>
+        <h2 id="data-title">Explore campus information</h2>
+        <p>Browse sample events, student profiles, and FAQs. These JSON records are demonstration data, not official college records.</p>
+      </section>
+      <section class="data-panel" aria-label="JSON data browser">
+        <div class="data-controls">
+          <div><label for="data-type">Choose a collection</label><select id="data-type"><option value="events">Events</option><option value="students">Student profiles</option><option value="faqs">FAQs</option></select></div>
+          <div><label for="data-search">Search this collection</label><input id="data-search" type="search" placeholder="Search by keyword" autocomplete="off"></div>
+          <div><label for="data-filter" id="filter-label">Filter by category</label><select id="data-filter"><option value="">All categories</option></select></div>
+          <div><label for="data-sort">Sort results</label><select id="data-sort"></select></div>
+        </div>
+        <div class="data-status" id="data-status" role="status" aria-live="polite">Loading sample data…</div>
+        <div class="data-error" id="data-error" role="alert" hidden><p>StudentHub could not load this JSON file. Run the project from a local HTTP server and check that the data file is present.</p><button id="retry-data" type="button">Try again</button></div>
+        <div class="data-grid" id="data-results" aria-live="polite"></div>
+        <nav class="data-pagination" aria-label="Data result pages"><button id="previous-page" type="button" disabled>Previous</button><span id="page-status" aria-live="polite">Page 1 of 1</span><button id="next-page" type="button" disabled>Next</button></nav>
+      </section>
+      <aside class="data-note"><h3>About this demonstration</h3><p>Practical 6 loads JSON files from this project using Fetch API. Event dates, student identities, and FAQ content are sample data, not an official college calendar or real student records.</p></aside>
     </main>
-
     <footer>
         <p>&copy; 2026 StudentHub. All Rights Reserved.</p>
         <p>Email: support@studenthub.com</p>

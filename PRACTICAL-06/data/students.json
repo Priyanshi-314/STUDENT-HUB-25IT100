@@ -1,0 +1,107 @@
+[
+  {
+    "program": "B.Tech Information Technology",
+    "name": "Aarav Patel",
+    "email": "student01@example.edu",
+    "year": 1,
+    "id": 1
+  },
+  {
+    "program": "B.Tech Computer Engineering",
+    "name": "Aditi Shah",
+    "email": "student02@example.edu",
+    "year": 2,
+    "id": 2
+  },
+  {
+    "program": "B.Sc. Information Technology",
+    "name": "Dev Mehta",
+    "email": "student03@example.edu",
+    "year": 3,
+    "id": 3
+  },
+  {
+    "program": "B.Tech Information Technology",
+    "name": "Diya Desai",
+    "email": "student04@example.edu",
+    "year": 4,
+    "id": 4
+  },
+  {
+    "program": "B.Tech Computer Engineering",
+    "name": "Ishaan Joshi",
+    "email": "student05@example.edu",
+    "year": 1,
+    "id": 5
+  },
+  {
+    "program": "B.Sc. Information Technology",
+    "name": "Jiya Trivedi",
+    "email": "student06@example.edu",
+    "year": 2,
+    "id": 6
+  },
+  {
+    "program": "B.Tech Information Technology",
+    "name": "Kabir Shah",
+    "email": "student07@example.edu",
+    "year": 3,
+    "id": 7
+  },
+  {
+    "program": "B.Tech Computer Engineering",
+    "name": "Kiara Parmar",
+    "email": "student08@example.edu",
+    "year": 4,
+    "id": 8
+  },
+  {
+    "program": "B.Sc. Information Technology",
+    "name": "Manav Patel",
+    "email": "student09@example.edu",
+    "year": 1,
+    "id": 9
+  },
+  {
+    "program": "B.Tech Information Technology",
+    "name": "Mira Shah",
+    "email": "student10@example.edu",
+    "year": 2,
+    "id": 10
+  },
+  {
+    "program": "B.Tech Computer Engineering",
+    "name": "Neel Joshi",
+    "email": "student11@example.edu",
+    "year": 3,
+    "id": 11
+  },
+  {
+    "program": "B.Sc. Information Technology",
+    "name": "Nisha Desai",
+    "email": "student12@example.edu",
+    "year": 4,
+    "id": 12
+  },
+  {
+    "program": "B.Tech Information Technology",
+    "name": "Rohan Mehta",
+    "email": "student13@example.edu",
+    "year": 1,
+    "id": 13
+  },
+  {
+    "program": "B.Tech Computer Engineering",
+    "name": "Sara Trivedi",
+    "email": "student14@example.edu",
+    "year": 2,
+    "id": 14
+  },
+  {
+    "program": "B.Sc. Information Technology",
+    "name": "Vivaan Parmar",
+    "email": "student15@example.edu",
+    "year": 3,
+    "id": 15
+  }
+]

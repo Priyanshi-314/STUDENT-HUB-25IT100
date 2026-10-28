@@ -1,0 +1,92 @@
+[
+  {
+    "answer": "Browse sample listings in Events and confirm real schedules through official college channels.",
+    "id": 1,
+    "category": "Events",
+    "question": "How can I find current event details?"
+  },
+  {
+    "answer": "Open Register and complete all required fields. This project demonstrates frontend validation only.",
+    "id": 2,
+    "category": "Accounts",
+    "question": "How do I create a StudentHub account?"
+  },
+  {
+    "answer": "No. It validates in your browser and shows a demo message; it does not send or store your information.",
+    "id": 3,
+    "category": "Accounts",
+    "question": "Does the registration form create an account?"
+  },
+  {
+    "answer": "Use at least eight characters with uppercase and lowercase letters, a number, and a symbol.",
+    "id": 4,
+    "category": "Accounts",
+    "question": "What makes a password strong in this form?"
+  },
+  {
+    "answer": "Yes. Search a keyword, choose a category or program, and change the sort order.",
+    "id": 5,
+    "category": "Data explorer",
+    "question": "Can I change my search results?"
+  },
+  {
+    "answer": "Pagination keeps each results view easy to scan. Use Previous and Next to change pages.",
+    "id": 6,
+    "category": "Data explorer",
+    "question": "Why are only a few records shown at once?"
+  },
+  {
+    "answer": "It fetches the local events.json sample file from the Practical 6 data folder.",
+    "id": 7,
+    "category": "Data explorer",
+    "question": "Where does the Events page get its data?"
+  },
+  {
+    "answer": "Browsers often restrict Fetch requests from file URLs. Serve this project over HTTP to load JSON.",
+    "id": 8,
+    "category": "Data explorer",
+    "question": "Why does the Events page need a local server?"
+  },
+  {
+    "answer": "No. Names and example.edu addresses are synthetic records for this practical.",
+    "id": 9,
+    "category": "Privacy",
+    "question": "Are student profiles real?"
+  },
+  {
+    "answer": "No. The event dates are sample data, not an official college calendar.",
+    "id": 10,
+    "category": "Events",
+    "question": "Are the event dates confirmed?"
+  },
+  {
+    "answer": "Use Clear Form to remove entered values and validation messages.",
+    "id": 11,
+    "category": "Accounts",
+    "question": "How do I clear the registration form?"
+  },
+  {
+    "answer": "Check that the project is served over HTTP and the JSON file exists, then select Try again.",
+    "id": 12,
+    "category": "Data explorer",
+    "question": "What should I do if JSON loading fails?"
+  },
+  {
+    "answer": "Yes. Select FAQs in the collection menu on the Events page.",
+    "id": 13,
+    "category": "Data explorer",
+    "question": "Can I browse FAQs without changing pages?"
+  },
+  {
+    "answer": "The sample view shows a name, program, year, and example.edu address.",
+    "id": 14,
+    "category": "Privacy",
+    "question": "Which student profile fields are shown?"
+  },
+  {
+    "answer": "No. Searching, filtering, and sorting are not saved.",
+    "id": 15,
+    "category": "Privacy",
+    "question": "Does this project store search terms?"
+  }
+]
