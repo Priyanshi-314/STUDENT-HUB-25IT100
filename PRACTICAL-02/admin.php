@@ -33,6 +33,7 @@ $csrfToken = sh_csrf_token();
     <a href="admin.php" aria-current="page">Admin</a>
     <a href="faq.html">FAQ</a>
     <a href="feedback.html">Feedback</a>
+   
 </nav>
 
     <main id="main-content">
@@ -42,17 +43,39 @@ $csrfToken = sh_csrf_token();
             <p>You are signed in as <?= htmlspecialchars($user['username'], ENT_QUOTES, 'UTF-8') ?> with the administrator role. This page is protected by server-side role checks.</p>
         </section>
 
-        <article>
-            <h2>Admin Functions</h2>
+   
+<article>
+    <h2>Admin Functions</h2>
 
-            <ul>
-                <li><a href="../PRACTICAL-11/students.php">Manage Students — add, search, filter, edit, and delete records</a></li>
-                <li><a href="../PRACTICAL-12/events.php">Manage Events — maintain event details and validated posters</a></li>
-                <li>Manage Courses</li>
-                <li>View Reports</li>
-                <li>Manage Feedback</li>
-            </ul>
-        </article>
+    <ul>
+        <li>
+            <a href="../PRACTICAL-11/students.php">
+                Manage Students — add, search, filter, edit, and delete records
+            </a>
+        </li>
+
+        <li>
+            <a href="../PRACTICAL-12/events.php">
+                Manage Events — maintain event details and validated posters
+            </a>
+        </li>
+
+        <li>
+            <a href="../PRACTICAL-13/index.php">
+                Practical 13 — AJAX Student Management (Fetch API and JSON)
+            </a>
+        </li>
+
+        <li>
+            <a href="../PRACTICAL-14/dashboard.php">
+                Practical 14 — Admin Dashboard, Reports and Audit Logs
+            </a>
+        </li>
+
+        <li>Manage Courses</li>
+        <li>Manage Feedback</li>
+    </ul>
+</article>
 
         <aside>
             <h3>Admin Notice</h3>
