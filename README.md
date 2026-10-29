@@ -4,10 +4,10 @@
 StudentHub is a semester-long student portal project for the Web Development Frameworks (ITUE203) practicals. It begins with requirements and navigation planning, then builds independent, progressively enhanced practicals.
 
 ## Purpose
-This repository organizes the official practical work into separate folders. Practicals 1–10 are implemented and verified locally; Practicals 11–14 remain pending. GitHub publication is pending repository write access.
+This repository organizes the official practical work into separate folders. Practicals 1–12 are implemented; Practicals 13–14 remain pending. Local MySQL setup is required for the database practicals. GitHub publication is pending repository write access.
 
 ## Technologies across the practicals
-The official list uses HTML5, CSS3, CSS Grid, Flexbox, optional Bootstrap/Tailwind, JavaScript ES6+, JSON, Fetch API, PHP, CSV/JSON file storage, MySQL, MySQLi, PDO, sessions, and Git/GitHub. Only technologies required by each practical should be added to its folder.
+The official list uses HTML5, CSS3, CSS Grid, Flexbox, optional Bootstrap/Tailwind, JavaScript ES6+, JSON, Fetch API, PHP, CSV/JSON file storage, MySQL, MySQLi, PDO, sessions, validated image uploads, and Git/GitHub. Only technologies required by each practical should be added to its folder.
 
 ## Project structure
 
@@ -24,13 +24,13 @@ STUDENT HUB/
 ├── PRACTICAL-08/  # MySQL schema, seed data, PDO connection and check
 ├── PRACTICAL-09/  # MySQLi registration, duplicate checks, hashing and validation
 ├── PRACTICAL-10/  # sessions, role guards, timeout, logout and remember token
-├── PRACTICAL-11/  # reserved; implementation pending
-├── PRACTICAL-12/  # reserved; implementation pending
+├── PRACTICAL-11/  # MySQLi student CRUD, search, filters, pagination, CSV, and seed data
+├── PRACTICAL-12/  # admin event CRUD, validated poster uploads, filters, and audit records
 ├── PRACTICAL-13/  # reserved; implementation pending
 ├── PRACTICAL-14/  # reserved; implementation pending
 ```
 
-Practicals 11–14 remain reserved for later implementation. Completed practicals have separate documentation and screenshots folders; this root README is the single common README.
+Practicals 13–14 remain reserved for later implementation. Completed practicals have separate documentation and screenshots folders; this root README is the single common README.
 
 ## Official practical list and status
 
@@ -46,8 +46,8 @@ Practicals 11–14 remain reserved for later implementation. Completed practical
 | 8 | MySQL Schema Design, ER Model, PDO Connectivity, and Prepared Statements | Create students/events/registrations schema and seed data; use PDO and a prepared query for the Dashboard connection check. | Implemented and verified against the local XAMPP MySQL database; connection screenshot saved |
 | 9 | Secure User Registration with Database Insert, Duplicate Email Check, and Password Hashing | Validate the connected Register page, reject duplicate email/username, and insert student accounts with MySQLi and password_hash(). | Implemented and verified with valid, invalid, and duplicate cases; screenshots saved |
 | 10 | Secure Login/Logout with Sessions, Role-Based Access, Timeout, and Remember-Me Token | Use password_verify(), regenerated sessions, protected student/admin dashboards, a 20-minute timeout, last-login tracking, and a rotating remember-me token. | Implemented and verified for student/admin roles, failure, logout, timeout, and access control; screenshots saved |
-| 11 | Student Management CRUD with Search and Filter | Build student add/view/edit/delete, search, and filter with MySQLi and clear feedback. | Pending |
-| 12 | Event Management CRUD with Poster Upload and File Validation | Build admin event CRUD and validate poster type and file size on upload. | Pending |
+| 11 | Student Management CRUD with Search and Filter | Add, view, edit, delete, search/filter, paginate, export filtered CSV, and manage at least 20 synthetic MySQLi student records. | Implemented (admin-only CRUD and search/filter page; import the Practical 11 SQL file before use) |
+| 12 | Event Management CRUD with Poster Upload and File Validation | Admin event CRUD with JPEG/PNG/WebP poster validation (2 MB maximum), category/status filters, and event audit records. | Implemented (admin-only CRUD and poster handling; import the Practical 12 SQL file before use) |
 | 13 | PHP JSON API and AJAX/Fetch-Based CRUD without Page Reload | Create PHP JSON API endpoints and Fetch-based asynchronous list/add/update/delete without page reload. | Pending |
 | 14 | Admin Dashboard with Role-Based Access Control, Dynamic Menu, and Audit Log | Build an admin-only dashboard with dynamic statistics, role-based menus, and audit logging. | Pending |
 
@@ -70,17 +70,19 @@ Practicals 11–14 remain reserved for later implementation. Completed practical
 8. For Practical 8, start MySQL and import PRACTICAL-08/sql/studenthub.sql. Sign in with the Practical 10 demo student account to open the protected Dashboard and PDO connection check.
 9. For Practical 9, import PRACTICAL-09/sql/secure-auth.sql after the Practical 8 schema. Register from PRACTICAL-02/register.php.
 10. For Practical 10, sign in at PRACTICAL-02/login.php; role-protected dashboards, sign-out, 20-minute timeout, and remember-me are connected to the same pages.
-11. Practicals 11–14 remain pending.
+11. For Practical 11, import `PRACTICAL-11/sql/student-management.sql` once after the Practical 8 schema. Use the Admin panel link to manage student records.
+12. For Practical 12, import `PRACTICAL-12/sql/event-management.sql` once after the Practical 9 authentication tables. Use the Admin panel link to manage events and upload posters.
+13. Practicals 13–14 remain pending.
 
 ## Screenshots and documentation
 Store submission screenshots in the relevant `PRACTICAL-XX/screenshots/` directory. Keep explanations, checklists, and run instructions in that practical's `documentation/` directory. The Practical 1 sitemap and wireframes are in its `assets/` directory.
 
 ## Database setup
-Practicals 1–7 do not require MySQL. Practical 7 stores valid Contact submissions in PRACTICAL-07/storage/submissions.json. Import PRACTICAL-08/sql/studenthub.sql first, then PRACTICAL-09/sql/secure-auth.sql, to create the StudentHub database, sample records, authentication tables, and synthetic demo accounts.
+Practicals 1–7 do not require MySQL. Practical 7 stores valid Contact submissions in PRACTICAL-07/storage/submissions.json. Import `PRACTICAL-08/sql/studenthub.sql` first, then `PRACTICAL-09/sql/secure-auth.sql`. Import `PRACTICAL-11/sql/student-management.sql` once for the student status field and 20 synthetic records. Import `PRACTICAL-12/sql/event-management.sql` once for event poster/status columns and the event audit table. These migrations rely on the existing StudentHub schema and authentication tables.
 
 ## Local running notes
 Practical 5 validates the existing registration form in the browser; Practical 9 repeats validation on the server and hashes passwords. Practical 7 validates Contact submissions to JSON. Practicals 7–10 require PHP; Practicals 8–10 additionally require MySQL.
-Practical 2 pages use the shared Practical 3 stylesheet and forest-green theme. Practical 7 saves Contact submissions as JSON. Practical 9 and 10 require running PHP and importing both SQL files. Practical 9 creates accounts; Practical 10 protects the existing dashboard pages by role and expires idle sessions after 20 minutes. Use the PHP server for all `.php` pages and Fetch API pages.
+Practical 2 pages use the shared Practical 3 stylesheet and forest-green theme. Practical 7 saves Contact submissions as JSON. Practical 9 and 10 require running PHP and importing both SQL files. Practical 9 creates accounts; Practical 10 protects the existing dashboard pages by role and expires idle sessions after 20 minutes. Practicals 11 and 12 add administrator-only student and event management pages linked from the existing Admin panel. Use the PHP server for all `.php` pages and Fetch API pages.
 
 ## Practical 15 note
 The supplied PDF's summary also lists Practical 15, “Final Integration, Testing, Documentation, Submission, and Local Deployment.” The detailed list contains its title and hours only. This project follows the requested 14-folder scope; Practical 15 is not included in the status table or implemented here.

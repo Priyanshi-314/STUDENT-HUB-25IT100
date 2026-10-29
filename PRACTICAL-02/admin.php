@@ -46,8 +46,8 @@ $csrfToken = sh_csrf_token();
             <h2>Admin Functions</h2>
 
             <ul>
-                <li>Manage Students</li>
-                <li>Manage Events</li>
+                <li><a href="../PRACTICAL-11/students.php">Manage Students — add, search, filter, edit, and delete records</a></li>
+                <li><a href="../PRACTICAL-12/events.php">Manage Events — maintain event details and validated posters</a></li>
                 <li>Manage Courses</li>
                 <li>View Reports</li>
                 <li>Manage Feedback</li>

@@ -28,7 +28,7 @@ function sh_boot(): void
     if (isset($_SESSION['auth_user']['user_id'], $_SESSION['last_activity'])
         && time() - (int)$_SESSION['last_activity'] > STUDENTHUB_SESSION_TIMEOUT) {
         $timedOutUser = (int)$_SESSION['auth_user']['user_id'];
-        sh_revoke_remember_cookie();
+        sh_clear_remember_cookie();
         try {
             sh_audit('session_timeout', $timedOutUser);
         } catch (Throwable $exception) {
@@ -184,7 +184,7 @@ function sh_auth_user(): ?array
 
 function sh_role_destination(string $role): string
 {
-    return $role === 'admin' ? 'admin.php' : 'dashboard.php';
+    return '/PRACTICAL-10/dashboard.php';
 }
 
 function sh_require_role(string $requiredRole): array
@@ -192,7 +192,7 @@ function sh_require_role(string $requiredRole): array
     sh_boot();
     $user = sh_auth_user();
     if ($user === null) {
-        header('Location: login.php' . (!empty($_SESSION['session_expired']) ? '?expired=1' : ''));
+        header('Location: /PRACTICAL-10/login.php' . (!empty($_SESSION['session_expired']) ? '?expired=1' : ''));
         exit;
     }
     if ($user['role'] !== $requiredRole) {
@@ -221,6 +221,6 @@ function sh_logout(): never
         setcookie(session_name(), '', time() - 42000, $params['path'], $params['domain'], $params['secure'], $params['httponly']);
     }
     session_destroy();
-    header('Location: ../PRACTICAL-02/login.php?logged_out=1');
+    header('Location: /PRACTICAL-10/login.php?logged_out=1');
     exit;
 }

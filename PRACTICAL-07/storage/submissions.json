@@ -1,1 +1,13 @@
-[]
+[
+    {
+        "id": "7a9209ea6a407665",
+        "type": "contact",
+        "received_at": "2026-10-29T06:16:15+00:00",
+        "data": {
+            "name": "PRIYANSHI TARSARIYA",
+            "email": "25it100@charusat.edu.in",
+            "subject": "Practical 7 Testing",
+            "message": "This is a valid contact message for testing the StudentHub PHP form processor."
+        }
+    }
+]
